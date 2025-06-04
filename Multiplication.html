@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiplication Table</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-6 rounded-xl shadow-xl w-full max-w-md">
+    <h3 class="text-xl font-bold text-center text-blue-500 mb-4">
+      🔢 Multiplication  
+    </h3>
+    <input 
+      type="number" 
+      id="num" 
+      placeholder="Enter a number"
+      class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+    >
+    <div class="space-y-4">
+      <div id="result" class="bg-gray-50 p-4 rounded-md border border-gray-200 mt-3 text-gray-800 font-medium whitespace-pre-line"></div>
+
+      <button 
+        onclick="match();" 
+        class="bg-blue-500 text-white py-2 rounded-md w-full hover:bg-blue-700 transition"
+      >Calculation</button>
+       <button 
+        onclick="clearAll();" 
+        class="bg-blue-500 text-white py-2 rounded-md w-full hover:bg-blue-700 transition"
+      >Clear All</button>
+    </div>
+  </div> 
+
+  <script>
+    function match() {
+      const num = parseInt(document.getElementById('num').value);
+      const finalResult = document.getElementById('result');
+      finalResult.innerHTML = ""; 
+        if(isNaN(num)){
+            alert ("Please enter a number!");
+            return;
+            
+        }
+            for (let x = 1; x <= 12; x++) {
+            finalResult.innerHTML += ` ${x} × ${num}   = ${num * x}\n`;
+        }    
+      }   
+    
+    function clearAll(){
+    document.getElementById('num').value = "" ;  document.getElementById('result').innerHTML = "";
+    }
+  </script>
+</body>
+</html>
