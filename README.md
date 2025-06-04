@@ -3,6 +3,7 @@
 **Author:** Roya Hossaini
 
 **GitHub:** Hossaini1414
+
 **Date:** June 2025
 
 This is a simple web-based multiplication table calculator built using HTML, JavaScript, and Tailwind CSS.  
