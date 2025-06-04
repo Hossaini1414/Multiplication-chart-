@@ -1,6 +1,7 @@
 # 🧮 Multiplication Table Project
 
 **Author:** Roya Hossaini
+
 **GitHub:** Hossaini1414
 **Date:** June 2025
 
